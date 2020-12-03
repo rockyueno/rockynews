@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Rocky News</title>
+</head>
+<link rel="stylesheet" href="css/doctor.css">
+<link rel="stylesheet" href="css/style.css">
+<body>
+  <div class="container" id="app">
+    <section class="ttl-wrapper">
+      <div class="ttl-wrapper-inner">
+        <h1>Rocky News</h1>
+      </div>
+    </section>
+    <section class="main-wrapper">
+      <form>
+        <div class="filter-wrapper">
+          <div class="filter-select">
+            <select v-model="section">
+              <option v-for="section in sections" :value="section">{{ section }}</option>
+            </select>
+          </div>
+          <div class="filter-btn">
+            <a @click="getPosts(section)" class="button expanded">Filter</a>
+          </div>
+        </div>
+      </form>
+      <news-list :results="results"></news-list>
+    </section>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+$base-color: #eadfca;
+$sub-color: #aa998a;
+$accent-color: #9ec3bc;
+
+$ttl-height: 240px;
+$ttl-height-sp: 180px;
+
+body {
+  vertical-align: top;
+}
+
+.main-wrapper {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Title */
+.ttl-wrapper {
+  height: $ttl-height;
+  background-color: $base-color;
+  padding: 20px 0;
+}
+
+.ttl-wrapper-inner {
+  border-bottom: solid 8px $accent-color;
+}
+
+h1 {
+  text-align: center;
+  line-height: $ttl-height;
+  font-size: 72px;
+  color: $sub-color;
+  font-family: Cambria, "Minion Pro", "Times New Roman", sans-serif;
+}
+
+/* Filter */
+.filter-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 30px auto;
+  padding: 10px;
+  border: solid 2px $sub-color;
+  border-radius: 10px;
+  background-color: $base-color;
+  box-sizing: border-box;
+}
+
+.filter-select {
+  width: 70%;
+
+  select {
+    height: 38px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.filter-btn {
+  width: 25%;
+
+  a {
+    display: inline-block;
+    height: 38px;
+    width: 100%;
+    margin: auto;
+    color: $base-color;
+    background-color: $accent-color;
+    border: solid 2px $sub-color;
+    border-radius: 10px;
+    line-height: 34px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+/* news-list */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.columns {
+  width: 23%;
+  margin: 16px auto;
+}
+
+.card {
+  border: solid 2px $sub-color;
+  border-radius: 5px;
+  background-color: $base-color;
+}
+
+.card-divider {
+  padding: 1rem;
+}
+
+a img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-section {
+  padding: 1rem 1rem 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-wrapper {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .card {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .filter-select {
+    width: 52%;
+  }
+
+  .filter-btn {
+    width: 44%;
+  }
+
+  .columns {
+    width: 48%;
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .ttl-wrapper {
+    height: $ttl-height-sp;
+  }
+
+  h1 {
+    line-height: $ttl-height-sp;
+    font-size: 42px;
+  }
+
+  .filter-wrapper {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .filter-select {
+    width: 65%;
+  }
+
+  .filter-btn {
+    width: 33%;
+  }
+
+  .columns {
+    width: 100%;
+  }
+}
